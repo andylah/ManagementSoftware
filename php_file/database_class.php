@@ -3,9 +3,9 @@
 class database {
 
 var $host = "localhost";
-var $user = "bebikyuc_andylah";
-var $pass = "afronova";
-var $db = "bebikyuc_db1";
+var $user = "root";
+var $pass = "root";
+var $db = "db1";
 var $port = "3306";
 
 var $link_ID = 0;
