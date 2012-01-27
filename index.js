@@ -1,7 +1,7 @@
 Ext.chart.Chart.CHART_URL = 'lib/ext/resources/charts.swf';
 
 Ext.onReady(function(){
-
+    
     Ext.QuickTips.init();
 
     var usertxt = new Ext.form.TextField({
@@ -31,18 +31,24 @@ Ext.onReady(function(){
         items:[usertxt, passtxt,
                new Ext.Panel({
                    bodySytle:'text-decoration:none; padding-top:2em;',
-                   html:'<a href="#" onclick="App.registerForm.openForm()">Register</a>',
-                   listeners: {
-                    'click' : function(){
-                        alert("Link Clicked")
-                     }
-                   }
+                   html:'<a href="#" onclick="App.registerForm.openForm()">Register</a>'
                })
         ],
         buttons: [
                  {text: 'Login', iconCls: 'icon-run', handler: function(){
                       if(formLogin.getForm().isValid()){
-                          alert('Welcome '+Ext.get('usertxt_id').dom.value);
+                          formLogin.getForm().submit({
+                              url:'php_file/login.php',
+                              params:{task:'login_member'},
+                              waitMsg: 'Login process ...',
+                              waitTitle:'Login',
+                              failure:function(formLogin, action){
+                                  Ext.MessageBox.alert('Error', action.result.errorInfo)
+                              },
+                              success:function(formLogin, action){
+                                  window.location = MEMBER_URL;
+                              }
+                          });
                       }
                  }}
         ]

@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (isset($_SESSION['session_id'])){
+    header('Location: php_file/member_area.php');
+}
 $config = parse_ini_file("php_file/config.ini");
 error_reporting(E_ALL);
 
@@ -20,6 +24,9 @@ error_reporting(E_ALL);
 <script language="javascript1.2" src="javascript_file/validation.js"></script>
 <script language="javascript1.2" src="javascript_file/register.js"></script>
 
+<script language="javascript1.2">
+var MEMBER_URL = '<?php echo $config['member_area'] ?>';
+</script>
 <title><?php echo $config['host_title'] ?></title>
 </head>
 

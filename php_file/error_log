@@ -74,3 +74,33 @@
 [25-Jan-2012 01:44:39] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/register.php on line 21
 [25-Jan-2012 01:44:42] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/register.php on line 21
 [25-Jan-2012 01:44:42] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/register.php on line 21
+[27-Jan-2012 02:32:50] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:32:50] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:32:50] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:32:50] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:36:06] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:36:06] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:36:06] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:36:06] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:39:15] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:39:15] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:39:15] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:39:15] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:40:10] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:40:10] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:40:10] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:40:10] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:41:37] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:41:37] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:41:37] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:41:37] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:42:39] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:42:39] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:42:39] PHP Warning:  mysql_real_escape_string(): Access denied for user 'bebikyuc'@'localhost' (using password: NO) in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 02:42:39] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/bebikyuc/public_html/php_file/login.php on line 24
+[27-Jan-2012 03:02:59] PHP Warning:  session_destroy() expects exactly 0 parameters, 1 given in /home/bebikyuc/public_html/php_file/login.php on line 45
+[27-Jan-2012 03:03:09] PHP Warning:  session_destroy() expects exactly 0 parameters, 1 given in /home/bebikyuc/public_html/php_file/login.php on line 45
+[27-Jan-2012 03:03:24] PHP Warning:  session_destroy() expects exactly 0 parameters, 1 given in /home/bebikyuc/public_html/php_file/login.php on line 45
+[27-Jan-2012 03:04:31] PHP Warning:  session_destroy() expects exactly 0 parameters, 1 given in /home/bebikyuc/public_html/php_file/login.php on line 45
+[27-Jan-2012 03:14:19] PHP Warning:  parse_ini_file(php_file/config.ini): failed to open stream: No such file or directory in /home/bebikyuc/public_html/php_file/member_area.php on line 6
+[27-Jan-2012 03:26:05] PHP Warning:  parse_ini_file(php_file/config.ini): failed to open stream: No such file or directory in /home/bebikyuc/public_html/php_file/member_area.php on line 6
