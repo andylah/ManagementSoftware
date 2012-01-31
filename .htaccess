@@ -12,6 +12,7 @@ RewriteCond %{REQUEST_URI} !.*\.css$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.gif$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.js$ [NC]
 RewriteCond %{REQUEST_URI} !.*\.php$ [NC]
+RewriteCond %{REQUEST_URI} !.*\.json$ [NC]
 RewriteRule .* /index.php
 
 DirectoryIndex index.html index.php

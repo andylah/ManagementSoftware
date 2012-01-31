@@ -1,0 +1,16 @@
+[{
+   text:'Master Database',
+   expanded: true,
+   icon:'/lib/ext/icons/house.png',
+   children:[{
+           text:'Master Customer',
+           id:'customer',
+           icon:'/lib/ext/icons/user.png',
+           leaf:true
+   }]
+},{
+   text:'Logout',
+   id:'logout',
+   leaf:true,
+   icon:'/lib/ext/icons/door_out.png'
+}]

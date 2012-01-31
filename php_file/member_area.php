@@ -21,71 +21,60 @@ $config = parse_ini_file("config.ini");
 <title><?php echo $config['host_title'] ?></title>
 </head>
 <body>
-
-   
+    <div id="ad-sense" class="adsense x-hidden">
+        <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-3619184054099014";
+            /* ExtJs-IklanPanel */
+            google_ad_slot = "1244975065";
+            google_ad_width = 120;
+            google_ad_height = 240;
+            //-->
+        </script>
+        <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
 </body>
 </html>
 <script type="text/javascript">
 Ext.onReady(function(){
     var layout_west = new Ext.tree.TreePanel({
             region:'north',
+            id:'treePanel',
             title: 'Menus',
             height:250,
             bodyStyle:'margin-bottom:6px;',
             autoScroll:true,
-            enableDD:false,
             rootVisible:false,
-            id:'treePanel',
-            root: {
-                text: 'Menu',
-                expanded:true,
-                nodeType:'async',
-                children:[
-                    {
-                        text:'Menu1',
-                        expanded:true,
-                        children:[
-                            {
-                                text:'Menu1.1',
-                                leaf:true
-                            }
-                        ]
-                    },{
-                        text:'Menu2',
-                        expanded:true,
-                        children:[
-                            {
-                                text:'Menu2.1',
-                                leaf:true
-                            }
-                        ]
-                    },{
-                        text:'Logout',
-                        id:'logout',
-                        leaf:true
-                    }
-                ]
-            },
-            listeners:{
-                click:function(n){
-                    switch (n.id) {
-                        case 'logout':
-                            do_logout()
-                            break;
-                    }
-                }
+            lines:false,
+            loader:new Ext.tree.TreeLoader({
+                dataUrl:'../menu.json'
+            }),
+            root:new Ext.tree.AsyncTreeNode()
+        })
+        layout_west.on('click', function(n){
+            var sn = this.selModel.selNode || {}
+            if(n.id == "logout"){
+                do_logout()
+            }else if (n.leaf && n.id != sn.id){
+                Ext.getCmp('content-panel').findById('tab_center').add(n.id+'-panel');
+                tab_center.setActiveTab(n.id+'-panel');
             }
         })
-        
-        var layout_west2 = new Ext.Panel({
+        var layout_west2 = ({
+            id:'adsense-panel',
+            autoScroll: true,
+            title:'Ad Sense',
             region:'center',
-            marhin:'10 0 0 0',
             autoScroll:true,
-            bodyStyle:'padding:10px;background:#eee;font-family:"Lucida Grande"'
+            bodyStyle:'padding:5px 5px 5px 5px;text-align:center;background:#eee;font-family:"Lucida Grande"',
+            resizable:true,
+            height:300,
+            contentEl:'ad-sense'
         })
         
         var tab_center = new Ext.TabPanel({
             xtype:'tabpanel',
+            id:'tab_center',
             resizeTabs:false,
             minTabWidth:115,
             tabWidth:135,
@@ -107,7 +96,8 @@ Ext.onReady(function(){
             items:['->',
                 {
                     text:'logout',
-                    handler:do_logout
+                    handler:do_logout,
+                    icon: '<?php echo $config['base_path']?>/lib/ext/icons/door_out.png'
                 }
             ]
         })
@@ -129,24 +119,31 @@ Ext.onReady(function(){
                 {
                     region:'north',
                     autoHeight:true,
-                    height:100,
+                    height:200,
                     border:false,
-                    html:'<div id="header"><span style="font-size:12px;">Extjs - Tutorial - Simple Login Screen</span></div>',
-                    margins:'0 0 5 0',
-                    style:'border-bottom: 4px solid #4c72a4;'
+                    html:'<div id="header"><h2>Management Software - EXTJS</h2></div>',
+                    margins:'0 5 5 5',
+                    style:'border-bottom: 5px solid #4c72a4;'
                 },{
                     region:'west',
                     baseCls:'x-plain',
                     xtype:'panel',
                     autoHeight:true,
-                    width:180,
+                    width:190,
                     border:false,
                     split:true,
-                    margins:'0 0 0 5',
+                    margins:'0 5 0 5',
                     items:[layout_west,layout_west2]
                 },layout_center
             ]
-        })
+        });
+        
+        var customer_panel = new Ext.Panel({
+            id:'customer-panel',
+            bodyStyle:'padding:10px',
+            title:'Master Customer ',
+            closable:true
+        });
         
         function do_logout(){
             Ext.Ajax.request({
@@ -161,6 +158,6 @@ Ext.onReady(function(){
             });
         }
         
-        layout_main.show()
+        layout_main.show();
     });
 </script>
